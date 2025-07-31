@@ -13,25 +13,8 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-{
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional, but recommended
-    },
-    lazy = false, -- neo-tree will lazily load itself
-
-},
-{
-	"ellisonleao/gruvbox.nvim",
-	lazy = false,
-	priority = 1000,
-	config = function()
-	vim.o.background = "dark" -- or "light" for light mode
-	vim.cmd([[colorscheme gruvbox]])
-	end
-}
+    require 'plugins.neotree',
+    require 'plugins.bufferline',
+    require 'plugins.colortheme'
 })
 
