@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # Dilshod Turab's custom NeoVim configuration
 
 To use this configuration you need to clone the source code of the config and run nvim command. But NeoVim has to be installed to your machine first!
@@ -13,3 +15,6 @@ Working with TypeScript
 
 Initial page
 <img width="1366" height="708" alt="image" src="https://github.com/user-attachments/assets/0a91b5b3-06e2-4da2-9ccc-21c6f822ce0f" />
+=======
+
+> > > > > > > bbd59d398cf8a669395eed523b49af157c4ec6e4
