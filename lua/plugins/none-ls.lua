@@ -14,6 +14,7 @@ return {
       ensure_installed = {
         'prettier', -- ts/js formatter
         'eslint_d', -- ts/js linter
+        'biome', -- new js ts formatter
         'shfmt', -- Shell formatter
         'checkmake', -- linter for Makefiles
         -- 'stylua', -- lua formatter; Already installed via Mason
@@ -24,7 +25,8 @@ return {
 
     local sources = {
       diagnostics.checkmake,
-      formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown' } },
+      formatting.biome.with { filetypes = { 'javascript', 'typescript', 'css' } },
+      formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'vue' } },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.terraform_fmt,
