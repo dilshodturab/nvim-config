@@ -8,6 +8,10 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
+-- move lines in visual mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
 -- save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 
