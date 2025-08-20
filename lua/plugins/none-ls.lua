@@ -25,8 +25,8 @@ return {
 
     local sources = {
       diagnostics.checkmake,
-      formatting.biome.with { args = { "-i", "2" }, filetypes = { "javascript", "typescript", "css" } },
-      formatting.prettier.with { args = { "-i", "2" }, filetypes = { "html", "json", "scss", "sass", "yaml", "markdown", "vue" } },
+      formatting.biome.with { filetypes = { "javascript", "typescript", "css" } },
+      formatting.prettier.with { filetypes = { "html", "json", "scss", "sass", "yaml", "markdown", "vue" } },
       formatting.stylua,
       formatting.shfmt.with { args = { "-i", "2" } },
       formatting.terraform_fmt,
