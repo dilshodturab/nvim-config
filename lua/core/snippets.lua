@@ -1,4 +1,6 @@
 -- Custom code snippets for different purposes
+-- Auto check for file changes
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, { command = "checktime" })
 
 -- Prevent LSP from overwriting treesitter color settings
 -- https://github.com/NvChad/NvChad/issues/1907
