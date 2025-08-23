@@ -1,32 +1,33 @@
 return { -- Highlight, edit, and navigate code
-  'nvim-treesitter/nvim-treesitter',
-  build = ':TSUpdate',
-  main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  main = "nvim-treesitter.configs", -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   opts = {
     ensure_installed = {
-      'lua',
-      'javascript',
-      'typescript',
-      'vimdoc',
-      'vim',
-      'regex',
-      'sql',
-      'dockerfile',
-      'json',
-      'go',
-      'gitignore',
-      'yaml',
-      'cmake',
-      'markdown',
-      'markdown_inline',
-      'bash',
-      'tsx',
-      'css',
-      'vue',
-      'scss',
-      'rust',
-      'html',
+      "lua",
+      "javascript",
+      "typescript",
+      "vimdoc",
+      "vim",
+      "regex",
+      "sql",
+      "dockerfile",
+      "json",
+      "go",
+      "gitignore",
+      "yaml",
+      "cmake",
+      "markdown",
+      "markdown_inline",
+      "angular",
+      "bash",
+      "tsx",
+      "css",
+      "vue",
+      "scss",
+      "rust",
+      "html",
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
@@ -35,9 +36,17 @@ return { -- Highlight, edit, and navigate code
       -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
       --  If you are experiencing weird indenting issues, add the language to
       --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-      additional_vim_regex_highlighting = { 'ruby' },
+      additional_vim_regex_highlighting = { "ruby" },
     },
-    indent = { enable = true, disable = { 'ruby' } },
+    indent = { enable = true, disable = { "ruby" } },
+    autotag = { enable = true },
+  },
+  dependencies = {
+    "windwp/nvim-ts-autotag", -- 👈 add the plugin
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    opts = {},
   },
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
