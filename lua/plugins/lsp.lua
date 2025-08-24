@@ -132,6 +132,14 @@ return {
     local servers = {
       ts_ls = {
         filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+        init_options = {
+        plugins = {
+          {
+            name = '@vue/typescript-plugin',
+            location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+            languages = { 'vue' },
+          },
+        },
         -- Optional: extra settings for JS/TS
         settings = {
           typescript = {
@@ -153,29 +161,13 @@ return {
         -- Angular LS needs the node_modules folder to find Angular core
         root_dir = require("lspconfig.util").root_pattern("angular.json", "project.json"),
       },
-      ruff = {},
-      pylsp = {
-        settings = {
-          pylsp = {
-            plugins = {
-              pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-              autopep8 = { enabled = false },
-              yapf = { enabled = false },
-              mccabe = { enabled = false },
-              pylsp_mypy = { enabled = false },
-              pylsp_black = { enabled = false },
-              pylsp_isort = { enabled = false },
-            },
-          },
-        },
-      },
+      --ruff = {},
       html = { filetypes = { "html", "twig", "hbs" } },
       cssls = { filetypes = { "css", "scss", "sass" } },
       tailwindcss = {},
+      volar = {},
       dockerls = {},
       sqlls = {},
-      terraformls = {},
       jsonls = {},
       yamlls = {},
       lua_ls = {
