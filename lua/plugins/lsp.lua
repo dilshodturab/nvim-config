@@ -139,7 +139,7 @@ return {
             location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
             languages = { 'vue' },
           },
-        },
+        }},
         -- Optional: extra settings for JS/TS
         settings = {
           typescript = {
